@@ -37,7 +37,7 @@ namespace WebApp.KeyVault.Demo.Controllers
         var output =  await  keyVaultClient.GetSecretAsync($"{_configuration["keyvaulturi"]}", "DbConnectionStringKey1");
 
 
-            return output.Value;
+            return $"The DbConnection string is :{output.Value}" ;
         }
 
         // POST api/values
